@@ -40,9 +40,9 @@ class MP4Frame(ttk.Frame):
     def create_widgets(self):
         pass
 
-class MP4Frame(ttk.Scale):
+class ProgressBar(ttk.Progressbar):
     def __init__(self, window):
-        super().__init__(window)
+        super().__init__(window, value=5, maximum=10)
         self.window = window
     
         # create frame widgets

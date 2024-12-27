@@ -20,7 +20,7 @@ class Main(Window):
 
         # run
         self.mainloop()
-
+    
     def create_widgets(self):
         # title
         self.title = ttk.Label(self, text='Youtube to MP3/MP4 Converter', 
@@ -32,12 +32,14 @@ class Main(Window):
         self.notebook = Notebook(self)
 
         # progress bar
+        self.progress_bar = ProgressBar(self)
     
         # done/reset button
         
         # place 
         self.title.grid(row = 0, column = 1, columnspan=3, sticky='nsew')
         self.notebook.grid(row = 1, column = 1, columnspan=3, rowspan=3, sticky='nsew')
+        self.progress_bar.grid(row = 4, column = 1, columnspan=3, rowspan=1, sticky='ew')
 
 def main():
     app = Main()
