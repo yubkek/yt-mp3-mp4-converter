@@ -6,9 +6,9 @@ from widgets import *
 class Main(Window):
     def __init__(self):
         # setup window
-        super().__init__(themename='darkly')
+        super().__init__(themename='cyborg')
         self.title('Youtube to MP3/MP4')
-        self.geometry('400x400')
+        self.geometry('400x300')
         self.resizable(height=False, width=False)
 
         # setup grid
@@ -34,12 +34,10 @@ class Main(Window):
         # progress bar
         self.progress_bar = ProgressBar(self)
     
-        # done/reset button
-        
         # place 
         self.title.grid(row = 0, column = 1, columnspan=3, sticky='nsew')
         self.notebook.grid(row = 1, column = 1, columnspan=3, rowspan=3, sticky='nsew')
-        self.progress_bar.grid(row = 4, column = 1, columnspan=3, rowspan=1, sticky='ew')
+        self.progress_bar.grid(row = 4, column = 1, columnspan=3, rowspan=2, sticky='ew')
 
 def main():
     app = Main()
