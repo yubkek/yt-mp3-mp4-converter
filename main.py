@@ -23,7 +23,8 @@ class Main(Window):
     
     def create_widgets(self):
         # title
-        self.title = ttk.Label(self, text='Youtube to MP3/MP4 Converter', 
+        self.title = ttk.Label(self, 
+                               text='Youtube to MP3/MP4 Converter', 
                                anchor='c',
                                font=('Calibri', 15)
                                )

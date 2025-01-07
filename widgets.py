@@ -79,7 +79,10 @@ class MP4Frame(ttk.Frame):
         self.download_button.grid(row = 2, column = 5, columnspan = 2, sticky = 'sew')
 
     def set_functions(self):
-        pass
+        self.download_button.bind('<Button-1>', self.dl_press)
+
+    def dl_press(self, event):
+        download_mp4(self.link.get())
 
 class ProgressBar(ttk.Progressbar):
     def __init__(self, window):
